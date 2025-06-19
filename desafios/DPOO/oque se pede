@@ -1,0 +1,117 @@
+1. Sistema Bancário
+Operações que devem ser implementadas:
+Consultar saldo;
+
+Consultar cheque especial;
+
+Depositar dinheiro;
+
+Sacar dinheiro;
+
+Pagar um boleto;
+
+Verificar se a conta está usando o cheque especial.
+
+Regras de Implementação:
+A conta bancária deve ter um limite de cheque especial somado ao saldo;
+
+O valor do cheque especial é definido no momento da criação da conta, com base no valor depositado:
+
+Se o valor inicial for R$500,00 ou menos, o cheque especial é R$50,00;
+
+Se o valor inicial for acima de R$500,00, o cheque especial é de 50% do valor depositado;
+
+Caso o cheque especial seja utilizado, a conta deve cobrar uma taxa de 20% do valor usado do cheque especial, assim que possível.
+=======================================================================================================================================
+2. Sistema de Controle de Carro
+Funções que devem ser implementadas:
+Ligar o carro;
+
+Desligar o carro;
+
+Acelerar;
+
+Diminuir velocidade;
+
+Virar para esquerda/direita;
+
+Verificar velocidade;
+
+Trocar a marcha.
+
+Regras de Implementação:
+O carro inicia desligado, em ponto morto (marcha 0), com velocidade 0;
+
+Carro desligado não pode realizar nenhuma função;
+
+Acelerar incrementa a velocidade em 1 km/h (limite máximo: 120 km/h);
+
+Diminuir velocidade decrementa em 1 km/h (mínimo: 0 km/h);
+
+Carro possui 6 marchas (de 0 a 6), e não pode pular marchas;
+
+Velocidade permitida por marcha:
+
+Marcha 0 (ponto morto): 0 km/h (não pode acelerar);
+
+Marcha 1: 0 – 20 km/h;
+
+Marcha 2: 21 – 40 km/h;
+
+Marcha 3: 41 – 60 km/h;
+
+Marcha 4: 61 – 80 km/h;
+
+Marcha 5: 81 – 100 km/h;
+
+Marcha 6: 101 – 120 km/h;
+
+Só é possível desligar o carro se estiver em marcha 0 e com velocidade 0;
+
+Só é possível virar (esquerda/direita) com velocidade entre 1 km/h e 40 km/h.
+=======================================================================================================================================
+3. Sistema de Banho de Petshop
+Operações que devem ser implementadas:
+Dar banho no pet;
+
+Abastecer com água;
+
+Abastecer com shampoo;
+
+Verificar nível de água;
+
+Verificar nível de shampoo;
+
+Verificar se há pet no banho;
+
+Colocar pet na máquina;
+
+Retirar pet da máquina;
+
+Limpar a máquina.
+
+Regras de Implementação:
+A máquina só permite 1 pet por vez;
+
+Cada banho consome:
+
+10 litros de água;
+
+2 litros de shampoo;
+
+Capacidade máxima da máquina:
+
+30 litros de água;
+
+10 litros de shampoo;
+
+Se o pet for retirado sem estar limpo, será necessário limpar a máquina antes de colocar outro pet;
+
+A limpeza consome:
+
+3 litros de água;
+
+1 litro de shampoo;
+
+O abastecimento só pode ser feito 2 litros por vez.
+
