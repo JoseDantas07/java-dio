@@ -1,23 +1,23 @@
 package br.com.dio.model;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class UserModel {
     private long id;
     private String email;
     private String name;
-    private OffsetDateTime birthday;
+    private LocalDate birthday;
 
-    public UserModel(long id, String email, String name, OffsetDateTime birthday) {
+    public UserModel(final long id, final String name, final String email, final LocalDate birthday) {
         this.id = id;
-        this.email = email;
         this.name = name;
+        this.email = email;
         this.birthday = birthday;
     }
 
-    public UserModel(){
-        
+    public UserModel() {
+
     }
 
     public long getId() {
@@ -28,11 +28,11 @@ public class UserModel {
         this.id = id;
     }
 
-    public OffsetDateTime getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(OffsetDateTime birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -52,7 +52,6 @@ public class UserModel {
         this.email = email;
     }
 
-    
 
     @Override
     public boolean equals(Object o) {
@@ -66,18 +65,14 @@ public class UserModel {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, name, birthday);
+        return Objects.hash(id, name, email, birthday);
     }
 
 
     @Override
     public String toString() {
         return "UserModel{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", name='" + name + '\'' +
-                ", birthday=" + birthday +
-                '}';
+                "id=" + id + ", name='" + name + '\''  +", email='" + email + '\'' + ", birthday=" + birthday + '}';
     }
 }
 
