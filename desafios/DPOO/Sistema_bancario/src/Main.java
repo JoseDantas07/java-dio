@@ -1,15 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import cadastro.User;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main{
+
+    public static void main(String[] args) {
+        var cliente1 = new User("jose",21,2000);
+        System.out.println( cliente1.getName()+" "+cliente1.getAge()+" "+cliente1.getBalance()+" "+cliente1.getCheck());
+    }
+
+    
+
+    public static void opcao(){
+        System.out.println("[1] Consultar saldo");
+        System.out.println("[2] Consultar cheque especial");
+        System.out.println("[3] Depositar dinheiro");
+        System.out.println("[4] Sacar dinheiro");
+        System.out.println("[5] Pagar um boleto");
+        System.out.println("[6] Verificar se a conta esta usando o cheque especial");
     }
 }
