@@ -15,11 +15,11 @@ Verificar se a conta está usando o cheque especial.
 Regras de Implementação:
 A conta bancária deve ter um limite de cheque especial somado ao saldo;
 
-O valor do cheque especial é definido no momento da criação da conta, com base no valor depositado:
+O valor do cheque especial é definido no momento da criação da conta, com base no valor depositado: (feito)
 
-Se o valor inicial for R$500,00 ou menos, o cheque especial é R$50,00;
+Se o valor inicial for R$500,00 ou menos, o cheque especial é R$50,00; (feito)
 
-Se o valor inicial for acima de R$500,00, o cheque especial é de 50% do valor depositado;
+Se o valor inicial for acima de R$500,00, o cheque especial é de 50% do valor depositado; (feito)
 
 Caso o cheque especial seja utilizado, a conta deve cobrar uma taxa de 20% do valor usado do cheque especial, assim que possível.
 =======================================================================================================================================
