@@ -1,73 +1,73 @@
 package visual;
 
 public class Car {
-    public static void carInicioCenter(){
+    public static void carFirstCenter(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | CC | || | ");
     }
-    public static void carInicioleft(){
+    public static void carFirstleft(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| CC | || | || | ");
     }
-    public static void carInicioRight(){
+    public static void carFirstRight(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | CC | ");
     }
-    public static void carSegundoCenter(){
+    public static void carSecondCenter(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | CC | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carSegundoLeft(){
+    public static void carSecondLeft(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| CC | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carSegundoRight(){
+    public static void carSecondRight(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | CC | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carTerceiroCenter(){
+    public static void carThirdCenter(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | CC | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carTerceiroLeft(){
+    public static void carThirdLeft(){
         System.out.println("| || | || | || | ");
         System.out.println("| CC | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carTerceiroRight(){
+    public static void carThirdRight(){
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | CC | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carQuartaCenter(){
+    public static void carFourthCenter(){
         System.out.println("| || | CC | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carQuartaLeft(){
+    public static void carFourthLeft(){
         System.out.println("| CC | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");
     }
-    public static void carQuartaRight(){
+    public static void carFourthRight(){
         System.out.println("| || | || | CC | ");
         System.out.println("| || | || | || | ");
         System.out.println("| || | || | || | ");

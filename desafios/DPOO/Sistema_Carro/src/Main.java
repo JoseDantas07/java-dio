@@ -1,9 +1,11 @@
-import java.util.Scanner;
+import functions.CarStatus;
 
-import visual.*;
+import visual.Car;
 
 public class Main{
     public static void main(String[] args) {
-        Car.carInicioCenter();
+        Car.carFirstCenter();
+
+        System.out.println(CarStatus.ligado());
     }
 }
