@@ -2,6 +2,7 @@ import functions.CarStatus;
 
 import visual.Car;
 import functions.Marcha;
+import functions.CarStatus;
 
 public class Main{
     /// não conseguir terminar ainda vou estudar mais
@@ -12,7 +13,7 @@ public class Main{
             marcha.accelerate();
             marcha.verifyMarch();
         }
-
+        CarStatus.ligado();
 
     }
 }

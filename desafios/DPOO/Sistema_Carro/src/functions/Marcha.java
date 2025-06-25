@@ -1,6 +1,7 @@
 package functions;
 
 public class Marcha {
+    private boolean pontoMorto = true;
     private boolean march01 = false;
     private boolean march02 = false;
     private boolean march03 = false;
@@ -17,8 +18,15 @@ public class Marcha {
         return  this.contador--;
     }
 
-    public void verifyMarch(){
-        if (contador == 1){
+    public void verifyMarch() {
+        if(contador == 0 ){
+            onPontoMorto();
+
+            offMarch01();
+            System.out.println("ponto morto");
+        }else if (contador == 1){
+            offPontoMorto();
+
             onMarch01();
 
             offMarch02();
@@ -59,6 +67,9 @@ public class Marcha {
         }
     }
 
+    public void onPontoMorto(){
+        this.pontoMorto = true;
+    }
     public void onMarch01(){
          this.march01 = true;
     }
@@ -78,6 +89,9 @@ public class Marcha {
          this.march06 = true;
     }
 
+    public void offPontoMorto(){
+        this.pontoMorto = false;
+    }
     public void offMarch01(){
           this.march01 = false;
     }
@@ -95,5 +109,9 @@ public class Marcha {
     }
     public void offMarch06(){
          this.march06 = false;
+    }
+
+    public boolean isPontoMorto() {
+        return this.pontoMorto;
     }
 }
