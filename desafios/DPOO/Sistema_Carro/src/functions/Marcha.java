@@ -59,41 +59,41 @@ public class Marcha {
         }
     }
 
-    public boolean onMarch01(){
-        return this.march01 = true;
+    public void onMarch01(){
+         this.march01 = true;
     }
-    public boolean onMarch02(){
-        return this.march02 = true;
+    public void onMarch02(){
+         this.march02 = true;
     }
-    public boolean onMarch03(){
-        return this.march03 = true;
+    public void onMarch03(){
+         this.march03 = true;
     }
-    public boolean onMarch04(){
-        return this.march04 = true;
+    public void onMarch04(){
+         this.march04 = true;
     }
-    public boolean onMarch05(){
-        return this.march05 = true;
+    public void onMarch05(){
+         this.march05 = true;
     }
-    public boolean onMarch06(){
-        return this.march06 = true;
+    public void onMarch06(){
+         this.march06 = true;
     }
 
-    public boolean offMarch01(){
-        return  this.march01 = false;
+    public void offMarch01(){
+          this.march01 = false;
     }
-    public boolean offMarch02(){
-        return this.march02 = false;
+    public void offMarch02(){
+         this.march02 = false;
     }
-    public boolean offMarch03(){
-        return this.march03 = false;
+    public void offMarch03(){
+        this.march03 = false;
     }
-    public boolean offMarch04(){
-        return this.march04 = false;
+    public void offMarch04(){
+         this.march04 = false;
     }
-    public boolean offMarch05(){
-        return this.march05 = false;
+    public void offMarch05(){
+         this.march05 = false;
     }
-    public boolean offMarch06(){
-        return this.march06 = false;
+    public void offMarch06(){
+         this.march06 = false;
     }
 }

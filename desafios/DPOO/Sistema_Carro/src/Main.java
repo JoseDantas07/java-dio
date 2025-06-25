@@ -12,10 +12,7 @@ public class Main{
             marcha.accelerate();
             marcha.verifyMarch();
         }
-        for (int i = 0; i <= 2; i++){
-            marcha.brake();
-            marcha.verifyMarch();
-        }
+
 
     }
 }
