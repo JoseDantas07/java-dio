@@ -120,6 +120,9 @@ public class User {
     public int getAge(){
         return age;
     }
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
     public double getBalance(){
       return balance;
     }

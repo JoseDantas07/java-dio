@@ -1,6 +1,8 @@
 package functions;
 
 public class CarStatus {
+    public static Marcha marcha = new Marcha();
+
     public static boolean ligado(){
         var turnOn = true;
         return turnOn;

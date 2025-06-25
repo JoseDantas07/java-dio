@@ -1,12 +1,21 @@
 import functions.CarStatus;
 
 import visual.Car;
+import functions.Marcha;
 
 public class Main{
-    /// não conseguir terminar ainda vou estudar mais 
+    /// não conseguir terminar ainda vou estudar mais
     public static void main(String[] args) {
-        Car.carFirstCenter();
+       Marcha marcha = new Marcha();
 
-        System.out.println(CarStatus.ligado());
+        for (int i = 0; i <= 5; i++){
+            marcha.accelerate();
+            marcha.verifyMarch();
+        }
+        for (int i = 0; i <= 2; i++){
+            marcha.brake();
+            marcha.verifyMarch();
+        }
+
     }
 }
