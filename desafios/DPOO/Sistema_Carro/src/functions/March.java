@@ -1,13 +1,19 @@
 package functions;
 
-public class Marcha {
-    private boolean pontoMorto = true;
-    private boolean march01 = false;
-    private boolean march02 = false;
-    private boolean march03 = false;
-    private boolean march04 = false;
-    private boolean march05 = false;
-    private boolean march06 = false;
+import java.util.Scanner;
+
+public class March {
+
+    public Scanner sc = new Scanner(System.in);
+
+    private boolean pontoMorto;
+    private boolean march01;
+    private boolean march02;
+    private boolean march03;
+    private boolean march04;
+    private boolean march05;
+    private boolean march06;
+    private int speedometer;
 
     private int contador = 0;
 
@@ -15,7 +21,7 @@ public class Marcha {
        return this.contador++;
     }
     public int brake(){
-        return  this.contador--;
+        return this.contador--;
     }
 
     public void verifyMarch() {
@@ -24,6 +30,7 @@ public class Marcha {
 
             offMarch01();
             System.out.println("ponto morto");
+
         }else if (contador == 1){
             offPontoMorto();
 
@@ -113,5 +120,14 @@ public class Marcha {
 
     public boolean isPontoMorto() {
         return this.pontoMorto;
+    }
+
+    public void speedometer(){
+        if (contador == 0){
+            do {
+                System.out.println("No neutro so pode ir ate 20km/h");
+                speedometer = sc.nextInt();
+            }while (speedometer > 20);
+        }
     }
 }
