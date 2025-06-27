@@ -2,18 +2,26 @@ package functions;
 
 public class CarStatus {
     public static March march = new March();
+    boolean turnOn;
 
-    public static void ligado(){
-       if (march.isPontoMorto()){
-           var turnOn = true;
-           System.out.println("ligou");
-           return;
+
+    public void ligado() {
+        if (march.isNeutral()) {
+            turnOn = true;
+            System.out.println("ligou");
         }
         System.out.println("O carro tem que esta no neutro");
     }
-    public static void desligado(){
-        var turnOff = false;
-        System.out.println("desligou");
-        return;
+
+    public void desligado() {
+        if (march.isNeutral() && march.isSpeedometer() == 0) {
+            System.out.println("Desligando...");
+        }else{
+            System.out.println("O carro deve estar em ponto morto e com 0 de velocidade");
+        }
+    }
+
+    public boolean isTurnOn() {
+        return turnOn;
     }
 }
