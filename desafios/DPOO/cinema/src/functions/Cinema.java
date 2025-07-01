@@ -1,3 +1,5 @@
+package functions;
+
 public sealed abstract class Cinema permits FamilyTicket, HalfPrice, ChooseMovie {
     private String name;
     private boolean dubbed;

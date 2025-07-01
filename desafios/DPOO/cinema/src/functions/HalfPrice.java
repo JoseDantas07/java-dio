@@ -1,3 +1,5 @@
+package functions;
+
 public non-sealed class HalfPrice extends Cinema {
 
     @Override
