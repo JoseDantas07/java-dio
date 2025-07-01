@@ -2,7 +2,7 @@ public sealed abstract class Cinema permits FamilyTicket, HalfPrice, ChooseMovie
     private String name;
     private boolean dubbed;
     private boolean subtitled;
-    private final int ticketPrice = 12;
+    private final double ticketPrice = 12;
 
     public String getName() {
         return name;
@@ -28,5 +28,9 @@ public sealed abstract class Cinema permits FamilyTicket, HalfPrice, ChooseMovie
         this.subtitled = subtitled;
     }
 
-    public abstract int getTicketPrice();
+    public abstract double chooseTicketPrice();
+
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
 }

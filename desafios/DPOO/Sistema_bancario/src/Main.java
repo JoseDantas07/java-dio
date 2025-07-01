@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main{
 
+    /// falta coisas
+
     public static void main(String[] args) {
         var sc = new Scanner(System.in);
         var cliente = new User("jose",21,2000);
