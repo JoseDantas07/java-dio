@@ -8,8 +8,6 @@ public non-sealed class Manager extends ExtendUser {
 
     public void managerRole(){
 
-
-
     }
 
     public boolean isAdm() {

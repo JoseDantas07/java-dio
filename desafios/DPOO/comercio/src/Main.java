@@ -25,7 +25,7 @@ public class Main {
                     manager.setName(scanner.next());
                     System.out.print("Senha: ");
                     manager.setPassword(scanner.next());
-                }while(manager.getName().equalsIgnoreCase(manager.getVerifyName()) && manager.getPassword().equalsIgnoreCase(manager.getVerifyPassword()));
+                }while(!manager.getName().equalsIgnoreCase(manager.getVerifyName()) && !manager.getPassword().equalsIgnoreCase(manager.getVerifyPassword()));
             }
             case 2 ->{
                 do {
@@ -33,7 +33,7 @@ public class Main {
                     seller.setName(scanner.next());
                     System.out.print("Senha: ");
                     seller.setPassword(scanner.next());
-                }while(seller.getName().equalsIgnoreCase(seller.getVerifyName()) && seller.getPassword().equalsIgnoreCase(seller.getVerifyPassword()));
+                }while(!seller.getName().equalsIgnoreCase(seller.getVerifyName()) && !seller.getPassword().equalsIgnoreCase(seller.getVerifyPassword()));
             }
             case 3 ->{
                 do {
@@ -41,7 +41,7 @@ public class Main {
                     attendant.setName(scanner.next());
                     System.out.print("Senha: ");
                     attendant.setPassword(scanner.next());
-                }while(attendant.getName().equalsIgnoreCase(attendant.getVerifyName()) && attendant.getPassword().equalsIgnoreCase(attendant.getVerifyPassword()));
+                }while(!attendant.getName().equalsIgnoreCase(attendant.getVerifyName()) && !attendant.getPassword().equalsIgnoreCase(attendant.getVerifyPassword()));
             }
         }
         System.out.println(manager.getName());
