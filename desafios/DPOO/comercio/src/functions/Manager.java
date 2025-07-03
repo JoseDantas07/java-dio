@@ -12,8 +12,7 @@ public non-sealed class Manager extends ExtendUser {
         System.out.println("È os cleintes estao gostando dos nossos preços");
     }
     public void consultSales(){
-        Seller seller = new Seller();
-        System.out.printf("Fizemos %s vendas ate agora", seller.MakeSale());
+
     }
 
     public boolean isAdm() {

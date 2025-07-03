@@ -15,7 +15,7 @@ public class AreaPeople {
     public void areaAttendant(){
         System.out.println("[1] Receber pagamentos ");
         System.out.println("[2] Fechar o caixa");
-        System.out.println("[3] Sair");
+        System.out.println("[0] Sair");
     }
 
 }

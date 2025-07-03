@@ -5,16 +5,17 @@ public non-sealed class Seller extends ExtendUser{
     private String verifyPassword = "123";
     private int MakeSale = 0;
 
-    public int MakeSale(){
+    public void MakeSale(){
         System.out.println("vendendo produtos");
-        return MakeSale++;
-    }
-    public void consultSales(){
-        System.out.println(getMakeSale());
+        addMakeSale();
     }
 
-    public int getMakeSale() {
-        return MakeSale;
+    public void getMakeSale() {
+        System.out.printf("Fizemos %d vendas ate agora\n",MakeSale);
+    }
+
+    public void addMakeSale() {
+        MakeSale++;
     }
 
     public String getVerifyName() {
