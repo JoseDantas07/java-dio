@@ -8,15 +8,8 @@ public non-sealed class Attendant extends ExtendUser{
         return verifyName;
     }
 
-    public void setVerifyName(String verifyName) {
-        this.verifyName = verifyName;
-    }
-
     public String getVerifyPassword() {
         return verifyPassword;
     }
 
-    public void setVerifyPassword(String verifyPassword) {
-        this.verifyPassword = verifyPassword;
-    }
 }

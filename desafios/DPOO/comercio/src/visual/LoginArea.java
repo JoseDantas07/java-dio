@@ -18,8 +18,5 @@ public class LoginArea {
         System.out.println("[2] Vendedor");
         System.out.println("[3] Atendente");
         System.out.println("[0] Sair");
-
-
-
     }
 }

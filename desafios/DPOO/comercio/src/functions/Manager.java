@@ -6,8 +6,14 @@ public non-sealed class Manager extends ExtendUser {
     private String verifyPassword = "0023";
 
 
-    public void managerRole(){
-
+    public void generateReport(){
+        System.out.println("As vendas estao batendo as metas");
+        System.out.println("Não tivemos nenhuma devolução de mercadoria");
+        System.out.println("È os cleintes estao gostando dos nossos preços");
+    }
+    public void consultSales(){
+        Seller seller = new Seller();
+        System.out.printf("Fizemos %s vendas ate agora", seller.MakeSale());
     }
 
     public boolean isAdm() {
@@ -18,15 +24,7 @@ public non-sealed class Manager extends ExtendUser {
         return verifyName;
     }
 
-    public void setVerifyName(String verifyName) {
-        this.verifyName = verifyName;
-    }
-
     public String getVerifyPassword() {
         return verifyPassword;
-    }
-
-    public void setVerifyPassword(String verifyPassword) {
-        this.verifyPassword = verifyPassword;
     }
 }
