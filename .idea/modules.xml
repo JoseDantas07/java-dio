@@ -18,6 +18,8 @@
       <module fileurl="file://$PROJECT_DIR$/exercicio/exercicio.iml" filepath="$PROJECT_DIR$/exercicio/exercicio.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-dio.iml" filepath="$PROJECT_DIR$/.idea/java-dio.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafios/simulando_uma_conta_bancaria./simulando_uma_conta_bancaria..iml" filepath="$PROJECT_DIR$/desafios/simulando_uma_conta_bancaria./simulando_uma_conta_bancaria..iml" />
+      <module fileurl="file://$PROJECT_DIR$/desafios/DPOO/telemarketing/telemarketing.iml" filepath="$PROJECT_DIR$/desafios/DPOO/telemarketing/telemarketing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desafios/DPOO/tributo_produtos/tributo_produtos.iml" filepath="$PROJECT_DIR$/desafios/DPOO/tributo_produtos/tributo_produtos.iml" />
     </modules>
   </component>
 </project>

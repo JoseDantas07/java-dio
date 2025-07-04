@@ -11,13 +11,6 @@ public non-sealed class Manager extends ExtendUser {
         System.out.println("Não tivemos nenhuma devolução de mercadoria");
         System.out.println("È os cleintes estao gostando dos nossos preços");
     }
-    public void consultSales(){
-
-    }
-
-    public boolean isAdm() {
-        return adm;
-    }
 
     public String getVerifyName() {
         return verifyName;
