@@ -15,16 +15,36 @@ public class CatalogBooks {
     }
 
     public List<Livro> searchByAuthor(String author){
-        List<Livro> bookForAuthor = new ArrayList<>();
+        List<Livro> bookAuthor = new ArrayList<>();
         if(!livroList.isEmpty()){
             for (Livro l : livroList){
                 if (l.getAuthor().equalsIgnoreCase(author)){
-                    bookForAuthor.add(l);
+                    bookAuthor.add(l);
                 }
             }
         }
-        return bookForAuthor;
+        return bookAuthor;
+    }
+    public List<Livro> searchByYearRange(int startyear, int endyear){
+        List<Livro> bookYear = new ArrayList<>();
+        if(!livroList.isEmpty()) {
+            for (Livro l : livroList) {
+                if (l.getYearPublication() > startyear && l.getYearPublication() < endyear){
+                    bookYear.add(l);
+                }
+            }
+        }
+        return bookYear;
     }
 
-
+    public Livro searchByTitle(String title){
+        Livro bookTitle = null;
+        for (Livro l : livroList){
+            if (l.getTitle().equalsIgnoreCase(title)){
+                bookTitle = l;
+                break;
+            }
+        }
+        return bookTitle;
+    }
 }

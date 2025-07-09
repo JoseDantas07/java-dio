@@ -11,6 +11,15 @@ public class Livro {
         this.yearPublication = yearPublication;
     }
 
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", yearPublication=" + yearPublication +
+                '}';
+    }
+
     public String getTitle() {
         return title;
     }
