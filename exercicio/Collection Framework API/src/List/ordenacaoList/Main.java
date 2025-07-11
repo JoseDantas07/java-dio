@@ -15,7 +15,7 @@ public class Main {
         System.out.println("[2] Ordenar Por Idade");
         System.out.println("[3] Ordenar Por Altura");
         option = scanner.nextInt();
-
+        scanner.nextLine();
         switch (option){
             case 1-> {
                 System.out.println("Digite o nome");
