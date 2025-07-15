@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class OrdemPessoas {
+public class orderPerson {
     List<People> pessoaList;
 
-    public OrdemPessoas() {
+    public orderPerson() {
         this.pessoaList = new ArrayList<>();
     }
 

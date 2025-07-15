@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        OrdemPessoas ordemPessoas = new OrdemPessoas();
+        orderPerson orderPerson = new orderPerson();
 
         int option;
 
@@ -27,10 +27,10 @@ public class Main {
                 System.out.println("Digite a sua altura");
                 double height = scanner.nextDouble();
 
-                ordemPessoas.addPeople(name,age,height);
+                orderPerson.addPeople(name,age,height);
             }
-            case 2-> System.out.println(ordemPessoas.sortByAge());
-            case 3-> System.out.println(ordemPessoas.sortByHeight());
+            case 2-> System.out.println(orderPerson.sortByAge());
+            case 3-> System.out.println(orderPerson.sortByHeight());
         }
     }
 }
