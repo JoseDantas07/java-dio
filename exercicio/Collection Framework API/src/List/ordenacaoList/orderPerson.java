@@ -21,8 +21,8 @@ public class orderPerson {
     }
 
     public List<People> sortByHeight(){
-        List<People> oderAge = new ArrayList<>(pessoaList);
-        Collections.sort(oderAge, new sortByHeight());
-        return oderAge;
+        List<People> oderHeight = new ArrayList<>(pessoaList);
+        Collections.sort(oderHeight, new sortByHeight());
+        return oderHeight;
     }
 }

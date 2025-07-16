@@ -14,6 +14,7 @@ public class Main {
             System.out.println("[3] encontrarMaiorNumero");
             System.out.println("[4] encontrarMenorNumero");
             System.out.println("[5] exibirNumeros");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
 
 

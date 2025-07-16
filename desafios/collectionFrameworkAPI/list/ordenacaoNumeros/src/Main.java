@@ -12,6 +12,7 @@ public class Main {
             System.out.println("[1] Adicionar numero");
             System.out.println("[2] Ordenar ascendente do numero");
             System.out.println("[3] Ordenar descendente do numero");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
 
             switch (option){

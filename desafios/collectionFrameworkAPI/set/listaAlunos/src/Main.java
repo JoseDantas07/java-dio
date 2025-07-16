@@ -15,6 +15,7 @@ public class Main {
             System.out.println("[3] Exibir alunos por nome");
             System.out.println("[4] Exibir alunos por nota");
             System.out.println("[5] Exibir alunos");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
 

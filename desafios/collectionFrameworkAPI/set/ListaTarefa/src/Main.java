@@ -19,6 +19,7 @@ public class Main {
             System.out.println("[7] Marcar tarefa concluida");
             System.out.println("[8] Marcar tarefa pendente");
             System.out.println("[9] Limpar lista tarefas");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
 

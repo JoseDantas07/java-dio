@@ -16,6 +16,7 @@ public class Main {
             System.out.println("[2] Exibir contatos");
             System.out.println("[3] Pesquisar por nome");
             System.out.println("[4] Atualizar numero de contato");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
 

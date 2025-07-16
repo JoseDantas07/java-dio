@@ -14,6 +14,7 @@ public class Main {
             System.out.println("[2] remover Convidado Por Codigo de Convite");
             System.out.println("[3] contarConvidados");
             System.out.println("[4] exibirConvidados");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
             switch (option){

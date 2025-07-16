@@ -11,8 +11,10 @@ public class Main {
             System.out.println("[2] removerPalavra");
             System.out.println("[3] verificarPalavra");
             System.out.println("[4] exibirPalavrasUnicas");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
+
             switch (option){
                 case 1 -> {
                     System.out.println("Digite a palavra que quer adicionar");

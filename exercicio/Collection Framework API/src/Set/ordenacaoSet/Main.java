@@ -15,6 +15,7 @@ public class Main {
             System.out.println("[1] Adicionar produto");
             System.out.println("[2] Exibir produtos por nome");
             System.out.println("[3] Exibir produtos por preco");
+            System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
 
