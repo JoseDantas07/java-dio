@@ -1,4 +1,4 @@
-package functions;
+package model;
 
 public class User {
     private String name;
