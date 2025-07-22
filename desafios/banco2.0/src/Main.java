@@ -63,6 +63,21 @@ public class Main {
 
                             while (!contaCorrete.isFinish()) {
                                 bankInterface.displayMenu();
+                                option = scanner.nextInt();
+
+                                switch (option) {
+                                    case 1 -> {
+                                        System.out.println("Digite o valor que quer depositar");
+                                        double value = scanner.nextDouble();
+                                        contaCorrete.deposit(value);
+                                    }
+                                    case 2 -> {
+                                        System.out.println("Digite o valor que quer retirar");
+                                        double value = scanner.nextDouble();
+                                        contaCorrete.sake(value);
+                                    }
+                                    case 3 -> contaCorrete.displayBalance();
+                                }
                             }
                         }
                         case 2 -> {
@@ -103,12 +118,8 @@ public class Main {
                                             double value = scanner.nextDouble();
                                             contaPoupanca.sake(value);
                                         }
-                                        case 3 -> {
+                                        case 3 -> contaPoupanca.displayBalance();
 
-                                        }
-                                        case 4 -> {
-
-                                        }
                                     }
                                 }while (option != 0) ;
                             }
