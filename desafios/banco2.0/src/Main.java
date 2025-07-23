@@ -62,21 +62,26 @@ public class Main {
                             contaCorrete.loginUser(validadeNameException.getName(), validateCpfException.getCpf());
 
                             while (!contaCorrete.isFinish()) {
-                                bankInterface.displayMenu();
-                                option = scanner.nextInt();
+                                while (finish){
+                                    bankInterface.displayMenu();
+                                    option = scanner.nextInt();
 
-                                switch (option) {
-                                    case 1 -> {
-                                        System.out.println("Digite o valor que quer depositar");
-                                        double value = scanner.nextDouble();
-                                        contaCorrete.deposit(value);
+                                    switch (option) {
+                                        case 1 -> {
+                                            System.out.println("Digite o valor que quer depositar");
+                                            double value = scanner.nextDouble();
+                                            contaCorrete.deposit(value);
+                                        }
+                                        case 2 -> {
+                                            System.out.println("Digite o valor que quer retirar");
+                                            double value = scanner.nextDouble();
+                                            contaCorrete.sake(value);
+                                        }
+                                        case 3 -> contaCorrete.displayBalance();
+                                        case 0 -> {
+                                            return;
+                                        }
                                     }
-                                    case 2 -> {
-                                        System.out.println("Digite o valor que quer retirar");
-                                        double value = scanner.nextDouble();
-                                        contaCorrete.sake(value);
-                                    }
-                                    case 3 -> contaCorrete.displayBalance();
                                 }
                             }
                         }
@@ -103,7 +108,7 @@ public class Main {
                             contaPoupanca.loginUser(validadeNameException.getName(), validateCpfException.getCpf());
 
                             while (!contaPoupanca.isFinish()) {
-                                do {
+                                while (finish){
                                     bankInterface.displayMenu();
                                     option = scanner.nextInt();
 
@@ -119,9 +124,12 @@ public class Main {
                                             contaPoupanca.sake(value);
                                         }
                                         case 3 -> contaPoupanca.displayBalance();
+                                        case 0 -> {
+                                            return;
+                                        }
 
                                     }
-                                }while (option != 0) ;
+                                }
                             }
                         }
                     }
