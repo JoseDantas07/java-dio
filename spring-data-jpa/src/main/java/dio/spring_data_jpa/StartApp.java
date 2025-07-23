@@ -20,8 +20,9 @@ public class StartApp implements CommandLineRunner {
         user.setUsername("Ze");
         user.setPassword("321");
 
-        repository.save(user);
 
+        repository.save(user);
+        repository.deleteById(4);
         for (User u : repository.findAll()){
             System.out.println(u);
         }
