@@ -10,5 +10,5 @@ public interface UserService {
 
     void removerById(Integer id);
 
-    void addBirthday(String id,BigDecimal balance);
+    void addBalance(Integer id, BigDecimal balance);
 }

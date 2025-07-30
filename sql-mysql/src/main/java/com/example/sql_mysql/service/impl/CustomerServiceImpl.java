@@ -32,7 +32,20 @@ public class CustomerServiceImpl implements UserService {
     }
 
     @Override
-    public void addBirthday(String id,BigDecimal balance) {
+    public void addBalance(Integer id, BigDecimal balance) {
+
+        if (customerRepository.existsById(id)){
+            customerRepository.findById(id).ifPresent(customerModel -> {
+                if (customerModel.getBalance() == null){
+                    customerModel.setBalance(new BigDecimal(0));
+                }
+                customerModel.setBalance(customerModel.getBalance().add(balance));
+                customerRepository.save(customerModel);
+            });
+
+        }else {
+            System.out.println("Não existe um usuario com esse id");
+        }
 
     }
 }

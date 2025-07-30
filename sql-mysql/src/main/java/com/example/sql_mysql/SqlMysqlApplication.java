@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.math.BigDecimal;
+
 @SpringBootApplication
 public class SqlMysqlApplication implements CommandLineRunner {
 
@@ -16,6 +18,7 @@ public class SqlMysqlApplication implements CommandLineRunner {
 	CustomerServiceImpl customerService;
 	@Override
 	public void run(String... args) throws Exception {
-
+		customerService.addBalance(8,new BigDecimal(2000));
+		customerService.displayCustomer();
 	}
 }
