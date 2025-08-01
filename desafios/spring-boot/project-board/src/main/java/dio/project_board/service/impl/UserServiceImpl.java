@@ -3,6 +3,7 @@ package dio.project_board.service.impl;
 import dio.project_board.entity.BoardColumnEntity;
 import dio.project_board.entity.BoardEntity;
 import dio.project_board.entity.CardEntity;
+import dio.project_board.nativeQuery.SelectBoardAndColumn;
 import dio.project_board.repository.BoardColumnRepository;
 import dio.project_board.repository.BoardRepository;
 import dio.project_board.repository.CardRepository;
@@ -46,4 +47,13 @@ public class UserServiceImpl implements UserService {
             System.out.println("Nao foi possivel achar o id: " + id);
         }
     }
+
+    @Override
+    public void displayBoardAndColumn(Long id) {
+
+        List<SelectBoardAndColumn> display = boardRepository.findBoardAndColumn(id);
+        System.out.println(display);
+    }
+
+
 }

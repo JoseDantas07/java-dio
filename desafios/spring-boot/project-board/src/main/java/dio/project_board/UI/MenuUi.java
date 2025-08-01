@@ -20,20 +20,32 @@ public class MenuUi {
         int option;
 
         do {
-            System.out.println("[1] Criar card");
-            System.out.println("[2] Cancelar card");
-            System.out.println("[3] Bloquear card");
-            System.out.println("[4] Desbloquea Card");
+            System.out.println("[1] Criar board");
+            System.out.println("[2] deletar board");
+            System.out.println("[3] procura board");
+            System.out.println("[4] Criar card");
+            System.out.println("[5] Cancelar card");
+            System.out.println("[6] Bloquear card");
+            System.out.println("[7] Desbloquea Card");
             System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
-        }while (option < 0 || option > 4);
+        }while (option < 0 || option > 5);
 
         switch (option){
             case 1->{createBoardColumn();}
-            case 2->{}
-            case 3->{}
+            case 2->{
+                System.out.println("Digite o id do board para deletar");
+                userServiceImpl.deleteBoard(scanner.nextLong());
+            }
+            case 3->{
+                System.out.println("Digite o id do board");
+                userServiceImpl.displayBoardAndColumn(scanner.nextLong());
+            }
             case 4->{}
+            case 5->{}
+            case 6->{}
+            case 7->{}
             case 0->{}
         }
     }
@@ -50,21 +62,26 @@ public class MenuUi {
         List<BoardColumnEntity> columnEntityList = new ArrayList<>();
 
         System.out.println("Digite o nome da coluna inicial do board");
-        String nameColumnInitial = scanner.nextLine();
-        var initialColumnName = userServiceImpl.createBoardColumn(nameColumnInitial,"initial");
-        columnEntityList.add(initialColumnName);
+        String initialColumnName = scanner.nextLine();
+        var initialColumn = userServiceImpl.createBoardColumn(initialColumnName,"initial");
+        columnEntityList.add(initialColumn);
 
         for (int i = 0 ; i <= moreColumn ; i++){
             System.out.println("Digite o nome da coluna pedente do board");
-            String nameColumnPending = scanner.nextLine();
-            BoardColumnEntity pendingColumnName = userServiceImpl.createBoardColumn(nameColumnPending,"pending");
-            columnEntityList.add(pendingColumnName);
+            String pendingColumnName = scanner.nextLine();
+            BoardColumnEntity pendingColumn = userServiceImpl.createBoardColumn(pendingColumnName,"pending");
+            columnEntityList.add(pendingColumn);
         }
 
+        System.out.println("Digite o nome da coluna de final do board");
+        String finalColumnName = scanner.nextLine();
+        BoardColumnEntity finalColumn = userServiceImpl.createBoardColumn(finalColumnName,"final");
+        columnEntityList.add(finalColumn);
+
         System.out.println("Digite o nome da coluna de cancelamento do board");
-        String nameColumnCancel = scanner.nextLine();
-        BoardColumnEntity cancelColumnName = userServiceImpl.createBoardColumn(nameColumnCancel,"cancel");
-        columnEntityList.add(cancelColumnName);
+        String cancelColumnName = scanner.nextLine();
+        BoardColumnEntity cancelColumn = userServiceImpl.createBoardColumn(cancelColumnName,"cancel");
+        columnEntityList.add(cancelColumn);
 
         userServiceImpl.createBoard(nameBoard,columnEntityList);
     }

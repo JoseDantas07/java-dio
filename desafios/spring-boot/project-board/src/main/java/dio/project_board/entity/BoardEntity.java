@@ -1,12 +1,6 @@
 package dio.project_board.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -22,7 +16,7 @@ public class BoardEntity {
 
     private String name;
 
-    @OneToMany(mappedBy = "boardEntity")
+    @OneToMany(mappedBy = "boardEntity", cascade = CascadeType.ALL)
     private List<BoardColumnEntity> boardColumnList;
 
     public BoardEntity() {
@@ -31,6 +25,12 @@ public class BoardEntity {
     public BoardEntity(String name, List<BoardColumnEntity> boardColumnList) {
         this.name = name;
         this.boardColumnList = boardColumnList;
+
+        if (boardColumnList != null) {
+            for (BoardColumnEntity column : boardColumnList) {
+                column.setBoardEntity(this);
+            }
+        }
     }
 
     public Long getId() {
@@ -53,7 +53,8 @@ public class BoardEntity {
         return boardColumnList;
     }
 
-    public void setBoardColumnList(List<BoardColumnEntity> boardColumnList) {
+    public void setBoardColumnList(List<BoardColumnEntity> boardColumnList){
         this.boardColumnList = boardColumnList;
     }
+
 }

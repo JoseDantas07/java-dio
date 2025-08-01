@@ -64,7 +64,19 @@ public class BoardColumnEntity {
         this.kind = kind;
     }
 
+    public List<CardEntity> getCardList() {
+        return cardList;
+    }
 
+    public void setCardList(List<CardEntity> cardList) {
+        this.cardList = cardList;
+    }
 
+    public BoardEntity getBoardEntity() {
+        return boardEntity;
+    }
 
+    public void setBoardEntity(BoardEntity boardEntity) {
+        this.boardEntity = boardEntity;
+    }
 }

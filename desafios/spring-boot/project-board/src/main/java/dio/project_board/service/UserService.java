@@ -11,4 +11,6 @@ public interface UserService {
     BoardColumnEntity createBoardColumn(String name,String kind);
     void createCard(String name, String description, OffsetDateTime dateTime);
     void deleteBoard(Long id);
+
+    void displayBoardAndColumn(Long id);
 }
