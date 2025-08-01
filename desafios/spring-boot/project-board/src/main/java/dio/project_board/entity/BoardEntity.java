@@ -28,8 +28,9 @@ public class BoardEntity {
     public BoardEntity() {
     }
 
-    public BoardEntity(String name) {
+    public BoardEntity(String name, List<BoardColumnEntity> boardColumnList) {
         this.name = name;
+        this.boardColumnList = boardColumnList;
     }
 
     public Long getId() {
@@ -48,4 +49,11 @@ public class BoardEntity {
         this.name = name;
     }
 
+    public List<BoardColumnEntity> getBoardColumnList() {
+        return boardColumnList;
+    }
+
+    public void setBoardColumnList(List<BoardColumnEntity> boardColumnList) {
+        this.boardColumnList = boardColumnList;
+    }
 }

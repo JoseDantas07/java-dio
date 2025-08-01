@@ -1,6 +1,7 @@
 package dio.project_board;
 
 import dio.project_board.UI.MenuUi;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,9 +13,11 @@ public class ProjectBoardApplication implements CommandLineRunner {
 		SpringApplication.run(ProjectBoardApplication.class, args);
 	}
 
+	@Autowired
+	MenuUi menuUi;
+
 	@Override
 	public void run(String... args) throws Exception {
-		MenuUi menuUi = new MenuUi();
 		menuUi.menu();
 	}
 }

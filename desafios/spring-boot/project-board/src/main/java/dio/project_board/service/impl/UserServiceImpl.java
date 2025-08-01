@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -21,15 +22,14 @@ public class UserServiceImpl implements UserService {
     CardRepository cardRepository;
 
     @Override
-    public void createBoard(String name) {
-        BoardEntity boardEntity = new BoardEntity(name);
+    public void createBoard(String name, List<BoardColumnEntity> columnEntityList) {
+        BoardEntity boardEntity = new BoardEntity(name,columnEntityList);
         boardRepository.save(boardEntity);
     }
 
     @Override
-    public void createBoardColumn(String name, String kind) {
-        BoardColumnEntity boardColumnEntity = new BoardColumnEntity(name,kind);
-        boardColumnRepository.save(boardColumnEntity);
+    public BoardColumnEntity createBoardColumn(String name, String kind) {
+        return new BoardColumnEntity(name,kind);
     }
 
     @Override
