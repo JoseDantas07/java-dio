@@ -1,7 +1,7 @@
 package dio.project_board.nativeQuery;
 
 public interface SelectBoardAndColumn {
-    String getName();
+    String getBoardName();
     String getColumnName();
     String getColumnKind();
 }

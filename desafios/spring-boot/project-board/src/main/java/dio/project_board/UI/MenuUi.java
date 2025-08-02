@@ -13,8 +13,9 @@ import java.util.Scanner;
 public class MenuUi {
     @Autowired
     UserServiceImpl userServiceImpl;
+    CardUi cardUi;
 
-    public Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     public void menu(){
 
         int option;
@@ -23,30 +24,22 @@ public class MenuUi {
             System.out.println("[1] Criar board");
             System.out.println("[2] deletar board");
             System.out.println("[3] procura board");
-            System.out.println("[4] Criar card");
-            System.out.println("[5] Cancelar card");
-            System.out.println("[6] Bloquear card");
-            System.out.println("[7] Desbloquea Card");
             System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
         }while (option < 0 || option > 5);
 
         switch (option){
-            case 1->{createBoardColumn();}
+            case 1->createBoardColumn();
             case 2->{
                 System.out.println("Digite o id do board para deletar");
                 userServiceImpl.deleteBoard(scanner.nextLong());
             }
             case 3->{
                 System.out.println("Digite o id do board");
-                userServiceImpl.displayBoardAndColumn(scanner.nextLong());
+                userServiceImpl.selectBoard(scanner.nextLong());
+                cardUi.Card();
             }
-            case 4->{}
-            case 5->{}
-            case 6->{}
-            case 7->{}
-            case 0->{}
         }
     }
 

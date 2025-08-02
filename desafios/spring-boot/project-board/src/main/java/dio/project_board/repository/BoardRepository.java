@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface BoardRepository extends JpaRepository<BoardEntity, Long> {
 
-    @Query("select be.name,bc.name,bc.kind from BoardEntity be join BoardcolumnEntity bc where be.id = :id")
+    @Query("select be.name as boardName,bc.name as columnName,bc.kind as columnKind from BoardEntity be join be.boardColumnList bc where be.id = :id")
     List<SelectBoardAndColumn> findBoardAndColumn(@Param("id") Long id);
 }

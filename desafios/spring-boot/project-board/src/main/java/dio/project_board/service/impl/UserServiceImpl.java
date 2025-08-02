@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService {
     BoardRepository boardRepository;
     BoardColumnRepository boardColumnRepository;
     CardRepository cardRepository;
+    BoardEntity boardEntity;
 
     @Override
     public void createBoard(String name, List<BoardColumnEntity> columnEntityList) {
@@ -49,10 +50,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void displayBoardAndColumn(Long id) {
+    public List<SelectBoardAndColumn> displayBoardAndColumn(Long id) {
+        return boardRepository.findBoardAndColumn(id);
+    }
 
-        List<SelectBoardAndColumn> display = boardRepository.findBoardAndColumn(id);
-        System.out.println(display);
+
+    @Override
+    public void selectBoard(Long id) {
+        if (boardRepository.existsById(id)){
+            boardEntity.setId(id);
+        }
+    }
+
+    @Override
+    public Long getBoard() {
+        return boardEntity.getId();
     }
 
 
