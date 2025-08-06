@@ -1,6 +1,7 @@
 package dio.project_board.service;
 
 import dio.project_board.entity.BoardColumnEntity;
+import dio.project_board.entity.BoardEntity;
 import dio.project_board.nativeQuery.SelectBoardAndColumn;
 
 import java.time.OffsetDateTime;
@@ -18,7 +19,7 @@ public interface UserService {
 
     List<SelectBoardAndColumn> displayBoardAndColumn(Long id);
 
-    void selectBoard(Long id);
+    BoardEntity selectBoard(Long id);
 
     Long getBoard();
 }

@@ -3,9 +3,10 @@ package dio.project_board.UI;
 import dio.project_board.entity.BoardEntity;
 import dio.project_board.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
-
+@Component
 public class CardUi {
     Scanner scanner = new Scanner(System.in);
 
@@ -13,7 +14,7 @@ public class CardUi {
     UserServiceImpl userService;
     BoardEntity boardEntity;
 
-    public void Card(){
+    public void card(BoardEntity boardEntity){
         int option;
         do {
             System.out.println("bem vindo board " + boardEntity.getId());

@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void createCard(String name, String description, OffsetDateTime dateTime) {
-        CardEntity cardEntity = new CardEntity(name ,description,dateTime);
+        CardEntity cardEntity = new CardEntity(description, name , dateTime);
         cardRepository.save(cardEntity);
     }
 
@@ -56,10 +56,8 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void selectBoard(Long id) {
-        if (boardRepository.existsById(id)){
-            boardEntity.setId(id);
-        }
+    public BoardEntity selectBoard(Long id) {
+        return boardRepository.findById(id).orElse(null);
     }
 
     @Override

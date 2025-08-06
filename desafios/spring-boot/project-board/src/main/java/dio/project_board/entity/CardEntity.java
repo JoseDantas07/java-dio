@@ -42,7 +42,7 @@ public class CardEntity {
     public CardEntity() {
     }
 
-    public CardEntity(String description, String name, OffsetDateTime dateTimeBeginning) {
+    public CardEntity(String name, String description, OffsetDateTime dateTimeBeginning) {
         this.description = description;
         this.name = name;
         this.dateTimeBeginning = dateTimeBeginning;

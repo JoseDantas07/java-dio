@@ -1,6 +1,7 @@
 package dio.project_board.UI;
 
 import dio.project_board.entity.BoardColumnEntity;
+import dio.project_board.entity.BoardEntity;
 import dio.project_board.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import java.util.Scanner;
 public class MenuUi {
     @Autowired
     UserServiceImpl userServiceImpl;
+    @Autowired
     CardUi cardUi;
 
     Scanner scanner = new Scanner(System.in);
@@ -37,8 +39,14 @@ public class MenuUi {
             }
             case 3->{
                 System.out.println("Digite o id do board");
-                userServiceImpl.selectBoard(scanner.nextLong());
-                cardUi.Card();
+                Long id = scanner.nextLong();
+                BoardEntity selectBoardForCard = userServiceImpl.selectBoard(id);
+
+                if (selectBoardForCard != null) {
+                    cardUi.card(selectBoardForCard);
+                } else {
+                    System.out.println("Board com ID " + id + " nao encontrado.");
+                }
             }
         }
     }
