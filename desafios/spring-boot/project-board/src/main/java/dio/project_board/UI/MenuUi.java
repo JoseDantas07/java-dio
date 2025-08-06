@@ -29,7 +29,7 @@ public class MenuUi {
             System.out.println("[0] Sair");
             option = scanner.nextInt();
             scanner.nextLine();
-        }while (option < 0 || option > 5);
+        }while (option < 1 || option > 5);
 
         switch (option){
             case 1->createBoardColumn();

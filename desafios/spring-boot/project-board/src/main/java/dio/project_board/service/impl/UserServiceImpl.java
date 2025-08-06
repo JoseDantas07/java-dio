@@ -35,8 +35,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void createCard(String name, String description, OffsetDateTime dateTime) {
-        CardEntity cardEntity = new CardEntity(description, name , dateTime);
+    public void createCard(BoardColumnEntity boardColumn, String name, String description, OffsetDateTime dateTime) {
+        CardEntity cardEntity = new CardEntity(boardColumn,name, description , dateTime);
         cardRepository.save(cardEntity);
     }
 

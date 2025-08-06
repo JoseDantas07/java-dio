@@ -42,10 +42,11 @@ public class CardEntity {
     public CardEntity() {
     }
 
-    public CardEntity(String name, String description, OffsetDateTime dateTimeBeginning) {
+    public CardEntity(BoardColumnEntity boardColumn,String name, String description, OffsetDateTime dateTimeBeginning) {
         this.description = description;
         this.name = name;
         this.dateTimeBeginning = dateTimeBeginning;
+        this.boardColumnEntity = boardColumn;
     }
 
     public Long getId() {
@@ -94,5 +95,13 @@ public class CardEntity {
 
     public void setDateTimeEnd(OffsetDateTime dateTimeEnd) {
         this.dateTimeEnd = dateTimeEnd;
+    }
+
+    public BoardColumnEntity getBoardColumnEntity() {
+        return boardColumnEntity;
+    }
+
+    public void setBoardColumnEntity(BoardColumnEntity boardColumnEntity) {
+        this.boardColumnEntity = boardColumnEntity;
     }
 }

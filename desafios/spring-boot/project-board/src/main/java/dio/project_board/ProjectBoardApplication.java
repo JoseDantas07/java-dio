@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ProjectBoardApplication implements CommandLineRunner {
-
+	/// projeto nao termiando 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectBoardApplication.class, args);
 	}
