@@ -6,13 +6,13 @@ import java.io.OutputStream;
 public class IOFilePersistence implements FilePersistence{
 
     private final String currentDir = System.getProperty("user.dir");
-    private final String storeDir = "/exercicio/javaIO/src/";
+    private final String storeDir = "/exercicio/javaIo/src/";
     private final String fileName;
 
     public IOFilePersistence(String fileName) throws IOException {
         this.fileName = fileName;
         var file = new File(currentDir + storeDir);
-        if (file.exists() && !file.mkdir()){
+        if (!file.exists() && !file.mkdirs()){
             throw new IOException("Erro ao criar arquivo");
         }
 
