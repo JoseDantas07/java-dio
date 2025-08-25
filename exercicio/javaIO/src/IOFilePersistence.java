@@ -1,27 +1,22 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-public class IOFilePersistence implements FilePersistence{
-
-    private final String currentDir = System.getProperty("user.dir");
-    private final String storeDir = "/exercicio/javaIo/src/" ;
-    private final String fileName;
+public class IOFilePersistence extends Diretorio implements FilePersistence {
 
     public IOFilePersistence(String fileName) throws IOException {
-        this.fileName = fileName;
+        super(fileName);
         var file = new File(currentDir + storeDir);
         if (!file.exists() && !file.mkdirs()) throw new IOException("Erro ao criar arquivo");
         clearFile();
     }
+
 
     @Override
     public String write(String data) throws IOException {
@@ -104,13 +99,5 @@ public class IOFilePersistence implements FilePersistence{
         }
 
         return sentence;
-    }
-
-    private void clearFile(){
-        try (OutputStream outputStream = new FileOutputStream(currentDir + storeDir + fileName)){
-            System.out.println("Criando arquivo" + currentDir + storeDir + fileName );
-        }catch (IOException e){
-            e.printStackTrace();
-        }
     }
 }
